@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Správa škůdců</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="recipe-list">
+        <button id="addRecipeButton">Přidat druh škůdce</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Druh škůdce</th>
+                    <th>Datum vytvoření</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody id="recipeTableBody">
+                <!-- Dynamicky generované řádky receptur -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modální okno pro úpravu receptury -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editRecipeForm">
+                <label for="recipeName">Druh škůdce:</label>
+                <input type="text" id="recipeName" name="recipeName">
+                <label for="recipeDescription">Popis:</label>
+                <textarea id="recipeDescription" name="recipeDescription"></textarea>
+                <div id="ingredientsList">
+                    <label for="ingredientName">Složka:</label>
+                    <input type="text" name="ingredientName" value="">
+                    <label for="ingredientAmount">Dávkování v g/l:</label>
+                    <input type="number" name="ingredientAmount" value="">
+                </div>
+                <button type="button" id="saveRecipeButton">Uložit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
